@@ -1,1 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+:root {
+  /*Colors*/
+  --black: #151515;
+  --white: #ffffff;
+  --gray: #3b3b3b;
+  --light-gray: #7a7a7a;
+  --medium-gray: #262626;
+
+  /* Typography*/
+
+  --ff-assistant: "Assistant", sans-serif;
+
+  --fs-1: 4rem;
+  --fs-2: 3.5rem;
+  --fs-3: 3rem;
+  --fs-4: 2.5rem;
+  --fs-5: 2rem;
+  --fs-6: 1.6rem;
+
+  --fw-800: 800;
+  --fw-500: 500;
+  --fw-200: 200;
+
+  /* Border radius*/
+  --radius-pill: 100px;
+  --radius-circle: 50%
+
+}
+
+/*Reset*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-assistant);
+}
+
+li {list-style: none;}
+
+a,
+img,
+span,
+data,
+button {display: block;}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {height: auto;}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
