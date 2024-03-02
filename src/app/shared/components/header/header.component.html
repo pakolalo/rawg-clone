@@ -9,16 +9,52 @@
     <a href="/" class="user_img--container">
       <h2 class="user_name">AA</h2>
     </a>
-    <a href="/" class="user_library">My library</a>
+    <button
+    [cdkMenuTriggerFor]="menu_myLibrary"
+    class="user_library"
+    >My library</button>
     <a href="/" class="icon-container">
       <img class="icon" src="../../../../assets/icons/bxs-bell.svg" alt="Bell icon">
     </a>
-    <a href="" class="icon-container">
+    <button
+    [cdkMenuTriggerFor]="menu_plus"
+    class="icon-container">
       <img class="icon" src="../../../../assets/icons/bx-plus-medical.svg" alt="Plus icon">
-    </a>
+    </button>
     <a class="api_link" href="/">API</a>
-    <a href="/" class="icon-container">
+    <button
+    [cdkMenuTriggerFor]="menu_dots"
+     class="icon-container">
       <img class="icon" src="../../../../assets/icons/bx-dots-horizontal-rounded.svg" alt="Dots icon">
-    </a>
+    </button>
   </section>
 </header>
+<ng-template #menu_myLibrary>
+  <div class="floating-menu" cdkMenu>
+    <button class="floating-menu-item" cdkMenuItem>Overview</button>
+    <button class="floating-menu-item" cdkMenuItem>My games</button>
+    <button class="floating-menu-item" cdkMenuItem>Wishlist</button>
+    <button class="floating-menu-item" cdkMenuItem>Reviews</button>
+    <button class="floating-menu-item" cdkMenuItem>Collections</button>
+  </div>
+</ng-template>
+<ng-template #menu_plus>
+  <div class="floating-menu" cdkMenu>
+    <button class="floating-menu-item" cdkMenuItem>Add games to your library</button>
+    <button class="floating-menu-item" cdkMenuItem>Add a missing game</button>
+    <button class="floating-menu-item" cdkMenuItem>Star a new collection</button>
+  </div>
+</ng-template>
+<ng-template #menu_dots>
+  <div class="floating-menu" cdkMenu>
+    <button class="floating-menu-item" cdkMenuItem>Settings</button>
+    <button class="floating-menu-item" cdkMenuItem>How does RAWG feel?</button>
+    <button class="floating-menu-item" cdkMenuItem>Leaderboard</button>
+    <button class="floating-menu-item" cdkMenuItem>Discord</button>
+    <button class="floating-menu-item" cdkMenuItem>&#64;rawgtheworld</button>
+    <button class="floating-menu-item" cdkMenuItem>&#64;rawgthepictures</button>
+    <button class="floating-menu-item" cdkMenuItem>Get an API KEY</button>
+    <button class="floating-menu-item" cdkMenuItem>Sitemap</button>
+    <button class="floating-menu-item" cdkMenuItem>Log out</button>
+  </div>
+</ng-template>
