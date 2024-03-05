@@ -81,6 +81,10 @@ text-align: center;
   border-bottom: solid 3px var(--white);
 }
 
+.nav-toggle-btn, .navbar {
+  display: none;
+}
+
 .floating-menu {
   margin-top: 10px;
   display: inline-flex;
@@ -129,3 +133,102 @@ text-align: center;
   background-color: rgb(208, 208, 208);
 }
 
+@media (max-width: 500px) {
+
+  .user_img--container, .user_library,
+  .icon-container, .api_link {
+    display: none;
+  }
+
+  .search_input {
+    width: 180px;
+  }
+
+  .nav-toggle-btn {
+    width: 50px;
+    height: 50px;
+    background-color: var(--white);
+    border-radius: var(--radius-circle);
+    display: grid;
+    place-content: center;
+    gap: 8px;
+    transition: var(--transition-1);
+    z-index: 1;
+  }
+
+  .nav-toggle-btn:is(:hover,:focus-visible) {gap: 10px;}
+
+  .nav-toggle-btn.header.active {gap: 8px;}
+
+  .nav-toggle-btn .line {
+    width: 25px;
+    height: 2px;
+    background-color: var(--black);
+    transition: var(--transition-1);
+  }
+
+  .nav-toggle-btn.active {
+    background-color: var(--black);
+  }
+
+  .nav-toggle-btn.active .line-1 {
+    background-color: var(--white);
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+
+  .nav-toggle-btn.active .line-2 {
+    background-color: var(--white);
+    transform: rotate(-45deg) translate(3px, -2px);
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.253);
+    height: 120vh;
+    text-align: center;
+    color: var(--black);
+    transition: .5s var(--cubic-in);
+  }
+
+  .navbar.active {
+    display: block;
+    transition-timing-function: var(--cubic-out);
+  }
+
+  .navbar_container {
+    position: absolute;
+    top: 10px;
+    left: 70px;
+    margin: 0 auto;
+    background-color: var(--white);
+    opacity: 1;
+    visibility: visible;
+    width: 80%;
+    height: 120%;
+    border-radius: 20px;
+  }
+
+  .navbar-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-link {
+    color: var(--black);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-700);
+    padding-block: 10px;
+    transition: var(--transition-1);
+  }
+
+  .navbar-link:is(:hover, :focus-visible) {
+    background-color: var(--white);
+    text-shadow: 1px 0 0 var(--black);
+  }
+
+}

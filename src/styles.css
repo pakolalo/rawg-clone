@@ -25,7 +25,16 @@
 
   /* Border radius*/
   --radius-pill: 100px;
-  --radius-circle: 50%
+  --radius-circle: 50%;
+
+   /*TRANSITION*/
+
+   --transition-1: .25s ease;
+   --transition-2: .5s ease;
+   --cubic-in: cubic-bezier(.51, .03, .64, .28);
+   --cubic-out: cubic-bezier(.05, .83, .52, .97);
+   --cubic-bounce: .6s cubic-bezier(.68, -.55, .265, 1.55);
+   --cubic-ease-out: 700ms cubic-bezier(.17, .67, 0, 1.01);
 
 }
 
@@ -37,7 +46,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--ff-assistant);
+
 }
 
 li {list-style: none;}
@@ -79,5 +88,6 @@ body {
   margin: 0 auto;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  font-family: var(--ff-assistant);
+}

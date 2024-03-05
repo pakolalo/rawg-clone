@@ -27,6 +27,48 @@
      class="icon-container">
       <img class="icon" src="../../../../assets/icons/bx-dots-horizontal-rounded.svg" alt="Dots icon">
     </button>
+    <button
+      class="nav-toggle-btn"
+      (click)="toggleNavBar()"
+      [class.active]="activeMenu"
+      id="box">
+      <span class="line line-1"></span>
+      <span class="line line-2"></span>
+    </button>
+    <nav class="navbar" [class.active]="activeMenu">
+      <section class="navbar_container">
+        <ul class="navbar-list">
+          <li>
+            <a
+            (click)="toggleNavBar()"
+            class="navbar-link navbar-title">My library</a>
+          </li>
+          <li>
+            <a
+            (click)="toggleNavBar()"
+            class="navbar-link">Overview</a>
+          </li>
+          <li>
+            <a
+            (click)="toggleNavBar()"
+            class="navbar-link">My games</a>
+          </li>
+          <li>
+            <a
+            (click)="toggleNavBar()"
+            class="navbar-link">Wishlist</a>
+          </li>
+          <li>
+            <a class="navbar-link">Reviews</a>
+          </li>
+          <li>
+            <a
+            (click)="toggleNavBar()"
+            class="navbar-link">Collections</a>
+          </li>
+        </ul>
+      </section>
+    </nav>
   </section>
 </header>
 <ng-template #menu_myLibrary>

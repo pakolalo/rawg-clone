@@ -9,5 +9,10 @@ import {CdkMenu, CdkMenuItem, CdkMenuTrigger} from '@angular/cdk/menu';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  isOpen = false;
+
+  activeMenu = false;
+
+  toggleNavBar() {
+    this.activeMenu = !this.activeMenu;
+  };
 }
