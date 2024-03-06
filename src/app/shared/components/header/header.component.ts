@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {CdkMenu, CdkMenuItem, CdkMenuTrigger} from '@angular/cdk/menu';
 
 @Component({
@@ -9,10 +9,9 @@ import {CdkMenu, CdkMenuItem, CdkMenuTrigger} from '@angular/cdk/menu';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-
   activeMenu = false;
 
-  toggleNavBar() {
+  @Input() toggleNavBar() {
     this.activeMenu = !this.activeMenu;
   };
 }

@@ -28,10 +28,10 @@
       <img class="icon" src="../../../../assets/icons/bx-dots-horizontal-rounded.svg" alt="Dots icon">
     </button>
     <button
-      class="nav-toggle-btn"
-      (click)="toggleNavBar()"
-      [class.active]="activeMenu"
-      id="box">
+    class="nav-toggle-btn"
+    (click)="toggleNavBar()"
+    [class.active]="activeMenu"
+    id="box">
       <span class="line line-1"></span>
       <span class="line line-2"></span>
     </button>
@@ -67,8 +67,46 @@
             class="navbar-link">Collections</a>
           </li>
         </ul>
+        <ul class="navbar-icons-container">
+          <li class="navbar-icons-list">
+            <a href="/" class="user_img--container user_img--containerb">
+              <h2 class="user_name">AA</h2>
+            </a>
+            <p class="navbar-icons-p">Profile</p>
+          </li>
+          <li class="navbar-icons-list">
+            <a href="/" class="navbar-img-container">
+              <img src="./../../../../assets/icons/bx-plus-medical.svg" alt="Plus icon img">
+            </a>
+            <p class="navbar-icons-p">Add</p>
+          </li>
+          <li class="navbar-icons-list">
+            <a href="/" class="navbar-img-container">
+              <img src="./../../../../assets/icons/bxs-bell.svg" alt="Bell icon img">
+            </a>
+            <p class="navbar-icons-p">Notifications</p>
+          </li>
+          <li class="navbar-icons-list">
+            <a href="/" class="navbar-img-container">
+              <img src="./../../../../assets/icons/bxs-cog.svg" alt="Cog icon img">
+            </a>
+            <p class="navbar-icons-p">Settings</p>
+          </li>
+          <li class="navbar-icons-list">
+            <a href="/" class="navbar-img-container">
+              <img src="./../../../../assets/icons/bxs-message-rounded.svg" alt="Message icon img">
+            </a>
+            <p class="navbar-icons-p">Feedback</p>
+          </li>
+          <li class="navbar-icons-list">
+            <a href="/" class="navbar-img-container">
+              <img src="./../../../../assets/icons/bx-log-out.svg" alt="Log out icon img">
+            </a>
+            <p class="navbar-icons-p">Log out</p>
+          </li>
+        </ul>
       </section>
-    </nav>
+      </nav>
   </section>
 </header>
 <ng-template #menu_myLibrary>
