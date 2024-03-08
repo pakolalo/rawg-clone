@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Game } from '../../models/game.model';
 
 @Component({
   selector: 'app-game',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './game.component.css'
 })
 export class GameComponent {
+
+  @Input({required: true}) game!: Game;
 
 }

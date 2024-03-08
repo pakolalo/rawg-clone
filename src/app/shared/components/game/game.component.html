@@ -1,13 +1,13 @@
 <article class="card_container">
-  <img class="game_img" src="./../../../../assets/img/cod.jpg" alt="">
+  <img class="game_img" [src]="game.background_image" [alt]="game.name">
   <div class="card_text--container">
     <a class="card-title--link" href="">
-      <h2 class="card-title">Call of Duty</h2>
+      <h2 class="card-title">{{game.name}}</h2>
     </a>
     <button class="card-btn">
       <img class="btn-icon" src="../../../../assets/icons/bx-plus-medical.svg" alt="Plus icon img">
       <img class="btn-icon-b" src="../../../../assets/icons/bx-plus-medical-black.svg" alt="Plus icon img">
-      191
+      {{game.added}}
     </button>
   </div>
 </article>

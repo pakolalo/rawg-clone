@@ -2,6 +2,8 @@
   <h1 class="game-list-title">New and trending</h1>
   <p class="game-list-subtitle">Based on player counts and release date</p>
   <div class="game-list">
-    <app-game></app-game>
+    <app-game
+    *ngFor="let game of $games()"
+    [game]="game"></app-game>
   </div>
 </section>
