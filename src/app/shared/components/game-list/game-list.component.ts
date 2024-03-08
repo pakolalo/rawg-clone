@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { GameComponent } from '../game/game.component';
 import { GameService } from '../../services/game.service';
 import { CommonModule } from '@angular/common';
+import { Game } from '../../models/game.model';
 
 
 @Component({
@@ -12,6 +13,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './game-list.component.css'
 })
 export class GameListComponent implements OnInit {
+
   $games = this.gameService.$games;
   constructor(
     private gameService: GameService,
