@@ -1,0 +1,19 @@
+.container {
+  margin-top: 30px;
+}
+
+.game-list-title {
+  font-size: var(--fs-1);
+  font-weight: var(--fw-800);
+  letter-spacing: 2px;
+}
+
+.game-list-subtitle {
+  margin-top: 20px;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-200);
+}
+
+.game-list {
+  margin-top: 30px;
+}

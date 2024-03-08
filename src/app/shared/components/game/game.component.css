@@ -1,0 +1,54 @@
+.card_container {
+  width: 300px;
+  height: auto;
+  background-color: var(--medium-gray);
+  border-radius: 15px;
+}
+
+.game_img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card_text--container {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: var(--fs-4);
+  font-weight: var(--fw-800);
+}
+
+.card-btn {
+  width: auto;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5em;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--gray);
+}
+
+.card-btn:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.btn-icon-b {
+  display: none;
+}
+
+.btn-icon, .btn-icon-b {
+  width: 15px;
+}
+
+.card-btn:hover .btn-icon {
+  display: none;
+}
+
+.card-btn:hover .btn-icon-b {
+  display: block;
+}
