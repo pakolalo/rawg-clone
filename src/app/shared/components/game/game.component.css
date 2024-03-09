@@ -21,6 +21,11 @@
   font-weight: var(--fw-800);
 }
 
+.card-title:hover {
+  color: var(--gray);
+  transition: .5s;
+}
+
 .card-btn--container {
   display: flex;
   align-items: center;
@@ -71,13 +76,11 @@
 }
 
 .description_container {
-  visibility: hidden;
-  display: none;
+display: none;
 }
 
 .card_container:hover .description_container {
-  display: block;
-  visibility: visible;
+  display:block;
   transition: .5s;
 }
 
@@ -108,7 +111,6 @@
 .btn-bottom img {
   width: 35px;
 }
-
 
 .btn-bottom:hover {
   color: darkgoldenrod;
