@@ -27,11 +27,15 @@
     </span>
     <span class="description_text--container">
       <p class="text_left">Genres</p>
-      <p class="text_right">{{game.genres}}</p>
+      <div>
+        <span class="genres_container" *ngFor="let genre of game.genres">
+          <a class="text_right--genre" href="">{{genre.name}}</a>
+        </span>
+      </div>
     </span>
     <span class="description_text--container">
       <p class="text_left">Chart</p>
-      <p class="text_right">{{game.esrb_rating}}</p>
+      <p class="text_right">#{{game.rating_top}}</p>
     </span>
     <span class="btn-bottom">
       <a href="">

@@ -89,14 +89,27 @@ display: none;
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   border-bottom: 1px solid var(--light-gray);
+}
+
+.description_text--container div {
+  display: flex;
+  gap: .5em;
 }
 
 .text_left {
   font-size: var(--fs-6);
   color: var(--light-gray);
 }
+
+.text_right--genre {
+  text-decoration: underline;
+}
+
+.text_right--genre:hover {
+  color: var(--light-gray);
+}
+
 .btn-bottom a {
   display: flex;
   justify-content: space-between;
