@@ -1,13 +1,48 @@
 <article class="card_container">
   <img class="game_img" [src]="game.background_image" [alt]="game.name">
-  <div class="card_text--container">
+  <section class="card_text--container">
     <a class="card-title--link" href="">
       <h2 class="card-title">{{game.name}}</h2>
     </a>
-    <button class="card-btn">
-      <img class="btn-icon" src="../../../../assets/icons/bx-plus-medical.svg" alt="Plus icon img">
-      <img class="btn-icon-b" src="../../../../assets/icons/bx-plus-medical-black.svg" alt="Plus icon img">
-      {{game.added}}
-    </button>
-  </div>
+    <section class="card-btn--container">
+      <button class="card-btn">
+        <img class="btn-icon" src="../../../../assets/icons/bx-plus-medical.svg" alt="Plus icon img">
+        <img class="btn-icon-b" src="../../../../assets/icons/bx-plus-medical-black.svg" alt="Plus icon img">
+        {{game.suggestions_count}}
+      </button>
+      <button class="card-btn card-btn-b">
+        <img class="btn-icon" src="../../../../assets/icons/bx-gift.svg" alt="Gift icon img">
+        <img class="btn-icon-b" src="../../../../assets/icons/bx-gift-black.svg" alt="Gift icon img">
+      </button>
+      <button class="card-btn card-btn-b">
+        <img class="btn-icon" src="../../../../assets/icons/bx-dots-horizontal-rounded.svg" alt="Dots icon img">
+        <img class="btn-icon-b" src="./../../../../assets/icons/bx-dots-horizontal-rounded-black.svg" alt="Dots icon img">
+      </button>
+    </section>
+  </section>
+  <section class="description_container">
+    <span class="description_text--container">
+      <p class="text_left">Release date:</p>
+      <p class="text_right">{{game.released | date}}</p>
+    </span>
+    <span class="description_text--container">
+      <p class="text_left">Genres</p>
+      <p class="text_right">{{game.genres}}</p>
+    </span>
+    <span class="description_text--container">
+      <p class="text_left">Chart</p>
+      <p class="text_right">{{game.esrb_rating}}</p>
+    </span>
+    <span class="btn-bottom">
+      <a href="">
+        <p>Show more like this</p>
+        <img src="./../../../../assets/icons/bx-chevron-right.svg" alt="Right arrow img">
+      </a>
+    </span>
+    <span class="btn-bottom">
+      <a href="">
+        <p>Hide this game</p>
+      </a>
+    </span>
+  </section>
 </article>

@@ -2,8 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { GameComponent } from '../game/game.component';
 import { GameService } from '../../services/game.service';
 import { CommonModule } from '@angular/common';
-import { Game } from '../../models/game.model';
-
 
 @Component({
   selector: 'app-game-list',
@@ -21,11 +19,18 @@ export class GameListComponent implements OnInit {
 
   ngOnInit(): void {
     this.gameService.searchGames()
-    .subscribe((data) => {
-      this.gameService.setGames(data.results);
+    .subscribe({
+    next:(data) => {
+      this.gameService.setGames(data.results)
     }
-
-    )
+    })
   }
 
 }
+
+// this.gameService.searchGames()
+//     .subscribe((data) => {
+//       this.gameService.setGames(data.results);
+//     }
+
+//     )
