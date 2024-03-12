@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { GameComponent } from '../game/game.component';
-import { GameService } from '../../services/game.service';
 import { CommonModule } from '@angular/common';
-import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
+import { switchMap } from 'rxjs';
+import { GameSearchService } from '../../services/game-search.service';
 
 @Component({
   selector: 'app-game-list',
@@ -13,17 +13,17 @@ import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
 })
 export class GameListComponent implements OnInit {
 
-  $games = this.gameService.$games;
+  $games = this.gameSearchService.$games;
   constructor(
-    private gameService: GameService,
+    private gameSearchService: GameSearchService,
   ) {}
 
   ngOnInit(): void {
-    this.gameService.queryString$.pipe(
-    switchMap((title: string) => this.gameService.searchGames(title)))
+    this.gameSearchService.queryString$.pipe(
+    switchMap((title: string) => this.gameSearchService.searchGames(title)))
     .subscribe({
       next:(data) => {
-        this.gameService.setGames(data.results);
+        this.gameSearchService.setGames(data.results);
       }
     })
     // this.gameService.searchGames()

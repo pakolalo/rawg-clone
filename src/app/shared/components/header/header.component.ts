@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {CdkMenu, CdkMenuItem, CdkMenuTrigger} from '@angular/cdk/menu';
 import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
-import { GameService } from '../../services/game.service';
+import { GameSearchService } from '../../services/game-search.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit{
   };
 
   constructor(
-    private gameService: GameService,
+    private gameSearchService: GameSearchService,
   ) {}
 
   ngOnInit(): void {
@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit{
     this.queryChange$.pipe(debounceTime(500), distinctUntilChanged())
     .subscribe({
       next:(query: string) => {
-        this.gameService.setQueryString(query);
+        this.gameSearchService.setQueryString(query);
       }
     })
   }
