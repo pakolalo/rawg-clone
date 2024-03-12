@@ -18,8 +18,8 @@ export class GameSearchService {
   constructor() { }
 
   searchGames(title: string = ''):Observable<SearchResult> {
-    const params = new HttpParams({fromObject: {search: title}})
     const url = new URL(`https://api.rawg.io/api/`);
+    const params = new HttpParams({fromObject: {search: title}})
     return this.http.get<SearchResult>(url + 'games',
     {params})
   }
