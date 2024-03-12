@@ -2,7 +2,12 @@
   <section class="container">
     <a href="/" class="logo-title">RAWG</a>
     <div class="input_container">
-      <input type="search" placeholder="Search" class="search_input">
+      <input type="text"
+      placeholder="Search"
+      class="search_input"
+      [(ngModel)]="query"
+      (ngModelChange)="queryChange$.next($event)"
+      >
         <img class="search_icon-w" src="../../../../assets/icons/bx-search copy.svg" alt="Search icon">
         <img class="search_icon-b" src="../../../../assets/icons/bx-search.svg" alt="Search icon">
     </div>

@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { GameComponent } from '../game/game.component';
 import { GameService } from '../../services/game.service';
 import { CommonModule } from '@angular/common';
+import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-game-list',
@@ -18,12 +19,19 @@ export class GameListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.gameService.searchGames()
+    this.gameService.queryString$.pipe(
+    switchMap((title: string) => this.gameService.searchGames(title)))
     .subscribe({
-    next:(data) => {
-      this.gameService.setGames(data.results)
-    }
+      next:(data) => {
+        this.gameService.setGames(data.results);
+      }
     })
+    // this.gameService.searchGames()
+    // .subscribe({
+    // next:(data) => {
+    //   this.gameService.setGames(data.results)
+    // }
+    // })
   }
 
 }
