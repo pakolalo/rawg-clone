@@ -19,7 +19,7 @@
   width: 500px;
   height: 50px;
   padding-left: 38px;
-  background-color: var(--gray);
+  background-color: var(--gray-transparent);
   border: none;
   border-radius: var(--radius-pill);
   font-size: var(--fs-6);

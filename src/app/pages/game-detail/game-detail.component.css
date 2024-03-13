@@ -1,0 +1,31 @@
+.bg_img--container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  object-position: center;
+  object-fit: cover;
+  opacity: .4;
+  z-index: -1;
+}
+
+.bg_img {
+  width: 100%;
+}
+
+.date_release {
+  width: 110px;
+  height: auto;
+  padding: 4px 6px;
+  border-radius: 5px;
+  background-color: var(--white);
+  color: var(--black);
+  text-align: center;
+  font-size: var(--fs-6);
+}
+
+.game_title {
+  font-size: var(--fs-1);
+  font-weight: var(--fw-800);
+  line-height: 1;
+}

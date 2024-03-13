@@ -4,7 +4,7 @@ import { Observable } from "rxjs";
 import { GameDetails } from "../models/game-details.model";
 import { GameService } from "../services/game.service";
 
-@Injectable()
+@Injectable({providedIn:'root'})
 export class GameIdResolver implements Resolve<Observable<GameDetails>> {
 
   constructor(

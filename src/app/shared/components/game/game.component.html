@@ -1,7 +1,7 @@
 <article class="card_container">
   <img class="game_img" [src]="game.background_image" [alt]="game.name">
   <section class="card_text--container">
-    <a class="card-title--link" href="">
+    <a class="card-title--link" [routerLink]="['/games', game.id]">
       <h2 class="card-title">{{game.name}}</h2>
     </a>
     <section class="card-btn--container">
